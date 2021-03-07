@@ -1,0 +1,20 @@
+{
+  "name": "ang-realworld-example-cypress-test",
+  "version": "1.0.0",
+  "description": "automatin testing with Cypress - angular realworld example app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Sasha Shulha",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SashaJson/angular-realworld-example-app-cypress-automation-test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SashaJson/angular-realworld-example-app-cypress-automation-test/issues"
+  },
+  "homepage": "https://github.com/SashaJson/angular-realworld-example-app-cypress-automation-test#readme"
+}
