@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Sasha Shulha",
+  "author": "Sasha Shulha (sashamiller666@gmail.com)",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/SashaJson/angular-realworld-example-app-cypress-automation-test#readme",
   "devDependencies": {
-    "cypress": "^6.6.0"
+    "cypress": "^6.7.1"
   }
 }
