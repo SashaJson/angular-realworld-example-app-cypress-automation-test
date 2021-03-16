@@ -1,0 +1,39 @@
+{
+  "articles": [
+    {
+      "title": "Request from API",
+      "slug": "request-from-api-q1vf4f",
+      "body": "Angular is cool",
+      "createdAt": "2021-03-16T21:14:07.971Z",
+      "updatedAt": "2021-03-16T21:14:07.971Z",
+      "tagList": [],
+      "description": "Learning apis",
+      "author": {
+        "username": "kidsisterneedtolearn",
+        "bio": null,
+        "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+        "following": false
+      },
+      "favorited": false,
+      "favoritesCount": 1
+    },
+    {
+      "title": "Request from API",
+      "slug": "request-from-api-h07vt",
+      "body": "Angular is cool",
+      "createdAt": "2021-03-16T21:14:07.026Z",
+      "updatedAt": "2021-03-16T21:14:07.026Z",
+      "tagList": [],
+      "description": "Learning apis",
+      "author": {
+        "username": "kidsisterneedtolearn",
+        "bio": null,
+        "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+        "following": false
+      },
+      "favorited": false,
+      "favoritesCount": 5
+    }
+  ],
+  "articlesCount": 500
+}
