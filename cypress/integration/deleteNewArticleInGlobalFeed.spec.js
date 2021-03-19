@@ -8,13 +8,6 @@ describe('Testing delete a new Article in a global feed', () => {
 
     it('Example first test', () => {
 
-        const userCredentials = {
-            "user": {
-                "email": "sashamiller666+1@gmail.com",
-                "password": "Cypress14789"
-            }
-        };
-
         const bodyRequest = {
             "article": {
                 "tagList": [],
@@ -24,9 +17,7 @@ describe('Testing delete a new Article in a global feed', () => {
             }
         };
 
-        cy.request('POST', 'https://conduit.productionready.io/api/users/login', userCredentials)
-            .its('body').then(body => {
-            const token = body.user.token;
+        cy.get('@token').then(token => {
 
             cy.request({
                 url: 'https://conduit.productionready.io/api/articles',

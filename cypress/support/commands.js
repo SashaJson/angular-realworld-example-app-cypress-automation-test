@@ -25,9 +25,23 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('loginToApplication', () => {
-   cy.visit('/login');
     // it is bad practice publish credential in repo
-   cy.get('[placeholder="Email"]').type('sashamiller666+1@gmail.com');
-   cy.get('[placeholder="Password"]').type('Cypress14789');
-   cy.get('form').submit();
+    const userCredentials = {
+        "user": {
+            "email": "sashamiller666+1@gmail.com",
+            "password": "Cypress14789"
+        }
+    };
+
+    cy.request('POST', 'https://conduit.productionready.io/api/users/login', userCredentials)
+        .its('body').then(body => {
+        const token = body.user.token;
+        cy.wrap(token).as('token');
+        cy.visit('/', {
+            onBeforeLoad(win) {
+                win.localStorage.setItem('jwtToken', token);
+            }
+        });
+    });
+
 });
