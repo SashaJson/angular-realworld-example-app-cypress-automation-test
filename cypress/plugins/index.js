@@ -13,9 +13,21 @@
 // the project's config changing)
 
 /**
- * @type {Cypress.PluginConfig}
+ * @type {{mkdirpSync?: *, ensureFileSync?: (function(*=): undefined), createSymlinkSync?: (function(*=, *=, *=): (any)), removeSync?: *, emptydirSync?: (function(*=): (*|undefined)), moveSync?: (function(*=, *=, *=): *|undefined), pathExists?: *, ensureDirSync?: *, createFile?: *, createLink?: *, remove?: *, ensureLinkSync?: (function(*=, *=): (any)), writeJson?: *, readJsonSync?: *, outputFile?: *, ensureSymlink?: *, emptyDir?: *, mkdirsSync?: *, writeJsonSync?: *, copy?: *, readJson?: *, write?, ensureFile?: *, ensureSymlinkSync?: (function(*=, *=, *=): (any)), move?: *, read?, ensureLink?: *, createSymlink?: *, ensureDir?: *, copySync?: (function(*=, *=, *=): undefined|*|void), emptyDirSync?: (function(*=): (*|undefined)), mkdirp?: *, createFileSync?: (function(*=): undefined), emptydir?: *, mkdirs?: *, outputFileSync?: (function(*=, ...[*]): (*|undefined)), pathExistsSync?: *, exists?, createLinkSync?: (function(*=, *=): (any)), writev?}|{promises?}}
  */
+
+const fs = require('fs-extra');
+const path = require('path');
+
+function getConfigurationByFile(file) {
+    const pathToConfigFile = path.resolve('cypress', 'config', `${file}.json`);
+    if (!fs.existsSync(pathToConfigFile)) {
+        return {};
+    }
+    return fs.readJson(pathToConfigFile);
+}
+
 module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
+    const file = config.env.configFile;
+    return getConfigurationByFile(file);
 }

@@ -20,7 +20,7 @@ describe('Testing delete a new Article in a global feed', () => {
         cy.get('@token').then(token => {
 
             cy.request({
-                url: 'https://conduit.productionready.io/api/articles/',
+                url: Cypress.env('apiUrl') + 'articles/',
                 headers: {'Authorization': 'Token ' + token},
                 method: 'POST',
                 body: bodyRequest
@@ -33,7 +33,7 @@ describe('Testing delete a new Article in a global feed', () => {
             cy.get('.article-actions').contains('Delete Article').click();
 
             cy.request({
-                url: 'https://conduit.productionready.io/api/articles?limit=10&offset=0',
+                url: Cypress.env('apiUrl') + 'articles?limit=10&offset=0',
                 headers: {'Authorization': 'Token ' + token},
                 method: 'GET'
             }).its('body').then(body => {

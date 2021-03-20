@@ -19,5 +19,8 @@
   "homepage": "https://github.com/SashaJson/angular-realworld-example-app-cypress-automation-test#readme",
   "devDependencies": {
     "cypress": "^6.8.0"
+  },
+  "dependencies": {
+    "fs-extra": "^9.1.0"
   }
 }

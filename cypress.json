@@ -6,5 +6,10 @@
   "retries": {
     "runMode": 2,
     "openMode": 1
+  },
+  "env": {
+    "username": "sashamiller666+1@gmail.com",
+    "password": "Cypress14789",
+    "apiUrl": "https://conduit.productionready.io/api/"
   }
 }
