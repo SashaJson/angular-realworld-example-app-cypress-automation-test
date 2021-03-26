@@ -9,4 +9,4 @@ RUN npm install
 
 RUN $(npm bin)/cypress verify
 
-RUN ["npm", "run", "cypress:e2e"]
+CMD ["npm", "run", "cypress:e2e"]
