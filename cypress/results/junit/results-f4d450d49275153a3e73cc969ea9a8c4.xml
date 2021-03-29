@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.8360" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-03-22T22:14:29" tests="0" file="cypress/integration/verifyGlobalFeedlikesCount.spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Testing verify global feed likes count" timestamp="2021-03-22T22:14:29" tests="1" time="2.8360" failures="0">
+    <testcase name="Testing verify global feed likes count Example first test" time="2.8360" classname="Example first test">
+    </testcase>
+  </testsuite>
+</testsuites>
