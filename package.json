@@ -9,7 +9,9 @@
     "junit:merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/result.xml",
     "mochawesome:merge": "npx mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesome.json && npx marge mochawesome.json",
     "cypress:run": "npm run prereport && npx cypress run",
-    "cypress:e2e": "npm run cypress:run; npm run junit:merge; npm run mochawesome:merge"
+    "cypress:e2e": "npm run cypress:run; npm run junit:merge; npm run mochawesome:merge",
+    "cy:run_spec": "npx cypress run --spec 'cypress/integration/shouldGaveTagsWithRoutingObject.spec.js' --headless",
+    "cy:run_browser": "npm run cy:run_spec -- --browser firefox & npm run cy:run_spec -- --browser chrome"
   },
   "keywords": [],
   "author": "Sasha Shulha (sashamiller666@gmail.com)",
