@@ -34,6 +34,7 @@
     "mochawesome-report-generator": "^5.2.0"
   },
   "dependencies": {
+    "cypress-plugin-snapshots": "^1.4.4",
     "fs-extra": "^9.1.0"
   }
 }

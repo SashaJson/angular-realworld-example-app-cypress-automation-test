@@ -18,6 +18,7 @@
 
 const fs = require('fs-extra');
 const path = require('path');
+const {initPlugin} = require('cypress-plugin-snapshots/plugin');
 
 function getConfigurationByFile(file) {
     const pathToConfigFile = path.resolve('cypress', 'config', `${file}.json`);
@@ -34,5 +35,6 @@ module.exports = async (on, config) => {
         config.env.username = environment.env.username;
         config.env.password = environment.env.password;
     }
+    initPlugin(on, config);
     return config;
 }
