@@ -27,7 +27,12 @@ function getConfigurationByFile(file) {
     return fs.readJson(pathToConfigFile);
 }
 
-module.exports = (on, config) => {
+module.exports = async (on, config) => {
     const file = config.env.configFile;
-    return getConfigurationByFile(file);
+    if (file) {
+        const environment = await getConfigurationByFile(file);
+        config.env.username = environment.env.username;
+        config.env.password = environment.env.password;
+    }
+    return config;
 }
