@@ -1,12 +1,12 @@
-describe('visual test', () => {
-    it('should test snapshots',() => {
-        cy.visit('/');
-        cy.contains('Froms').click();
-        cy.contains('Form Layouts').click();
+describe('Visual test', () => {
 
-        cy.contains('nb-card', 'Using the Grid').then(firstFrom => {
+    before('Login to the app', () => {
+        cy.loginToApplication();
+    });
 
-        });
+    it('should test snapshots', () => {
+
 
     });
+
 });
