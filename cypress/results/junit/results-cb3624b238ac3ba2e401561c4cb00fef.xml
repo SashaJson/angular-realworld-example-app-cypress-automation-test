@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="4.6480" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2021-03-22T22:14:05" tests="0" file="cypress/integration/interceptingAndModifyingRequestAndResponse.spec.js" time="0.0000" failures="0">
-  </testsuite>
-  <testsuite name="Testing intercepting and modifying the request and response" timestamp="2021-03-22T22:14:05" tests="1" time="4.6480" failures="0">
-    <testcase name="Testing intercepting and modifying the request and response Example first test" time="4.6480" classname="Example first test">
-    </testcase>
-  </testsuite>
-</testsuites>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="5.8390" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2021-03-29T22:55:45" tests="0" file="cypress/integration/shouldGaveTagsWithRoutingObject.spec.js" time="0.0000" failures="0">
-  </testsuite>
-  <testsuite name="Testing should gave tags with routing object" timestamp="2021-03-29T22:55:45" tests="1" time="5.8390" failures="0">
-    <testcase name="Testing should gave tags with routing object Example first test" time="5.8390" classname="Example first test">
-    </testcase>
-  </testsuite>
-</testsuites>
